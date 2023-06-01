@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "af_desenv_plat_web", "af_desenv_plat_web\af_desenv_plat_web.csproj", "{0311FE34-6589-4302-BF35-9CCB6E496CD1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "backend", "af_desenv_plat_web\backend.csproj", "{0311FE34-6589-4302-BF35-9CCB6E496CD1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
