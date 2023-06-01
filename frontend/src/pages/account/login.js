@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+ï»¿import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { URL_API } from '../../api';
 
@@ -36,7 +36,7 @@ const Login = () => {
             .then(response => {
 
                 if (!response.ok) {
-                    setMsgError("Usuário ou senha inválidos");
+                    setMsgError("UsuÃ¡rio ou senha invÃ¡lidos");
                     throw "";
 
                 }
@@ -44,11 +44,11 @@ const Login = () => {
                 return response.json();
             })
             .then(data => {
-                // Faça algo com os dados retornados
+                // FaÃ§a algo com os dados retornados
                 navigate("/home");
             })
             .catch(error => {
-                // Trate erros de solicitação ou análise
+                // Trate erros de solicitaÃ§Ã£o ou anÃ¡lise
                 console.error(error);
             });
 
@@ -75,7 +75,7 @@ const Login = () => {
                         <button type="submit" className="btn btn-primary btn-block">Entrar</button>
                     </form>
                     <div className="signup-link">
-                        <p className="mt-3">Não tem conta? <Link to="user/create">Cadastre-se</Link></p>
+                        <p className="mt-3">NÃ£o tem conta? <Link to="user/create">Cadastre-se</Link></p>
                     </div>
                 </div>
             </div>
