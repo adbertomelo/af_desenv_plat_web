@@ -12,7 +12,10 @@
     <BuildOutputFolder>$(MSBuildProjectDirectory)\build</BuildOutputFolder>
   </PropertyGroup>
   <ItemGroup>
+    <Folder Include="src\pages\user\" />
+    <Folder Include="src\pages\home\" />
+    <Folder Include="src\pages\admin\" />
+    <Folder Include="src\pages\account\" />
     <Folder Include="src\routers\" />
-    <Folder Include="src\pages\" />
   </ItemGroup>
 </Project>
