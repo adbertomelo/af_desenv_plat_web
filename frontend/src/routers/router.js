@@ -9,7 +9,6 @@ import CreateUser from '../pages/user/create';
 import EditUser from '../pages/user/edit';
 import DeleteUser from '../pages/user/delete';
 import Admin from '../pages/admin'
-import ListOfUsers from '../pages/admin/listofusers'
 import Home from '../pages/home'
 
 export default function MainRoutes() {
