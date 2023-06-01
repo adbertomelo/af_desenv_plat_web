@@ -6,7 +6,7 @@ const Home = () => {
 
     const menu = () => {
         return <li key="1">
-            <Link to {'/admin'}>Gestão Administrativa</Link>
+            <Link to={'/admin'}>Gestão Administrativa</Link>
         </li>
     }
 
@@ -21,3 +21,5 @@ const Home = () => {
         </div>
         )
 }
+
+export default Home; 
