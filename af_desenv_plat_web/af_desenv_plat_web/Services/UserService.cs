@@ -117,7 +117,6 @@ namespace backend.Services
 
             }
 
-
             await _userCollection.ReplaceOneAsync(x => x.Id == updatedUser.Id, updatedUser);
         }
         public async Task RemoveAsync(string id) =>
