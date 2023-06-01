@@ -44,6 +44,17 @@ const Create = () => {
             });
 
     }
+
+    const handleChange = (e) => {
+        let updatedValue = {};
+        updatedValue = { [e.target.name]: e.target.value };
+        setUser(user => (
+            {
+                ...user,
+                ...updatedValue
+            }));
+    }
+
     return (
 
         <>
