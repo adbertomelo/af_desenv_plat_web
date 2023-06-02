@@ -22,7 +22,7 @@ const Login = () => {
     }
 
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = (e) => {
 
 
         e.preventDefault();
@@ -35,16 +35,14 @@ const Login = () => {
             body: JSON.stringify({ ...user })
         };
 
+        setMsgButton("Aguarde...");
 
         fetch(`${URL_API}/account/login`, requestOptions)
             .then(response => {
 
-                setMsgButton("Aguarde...");
-
                 if (!response.ok) {
                     setMsgError("Usuário ou senha inválidos");
                     throw "";
-
                 }
                 // Analise a resposta como JSON e retorne os dados
                 return response.json();
