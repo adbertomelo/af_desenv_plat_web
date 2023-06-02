@@ -23,7 +23,6 @@ export default function MainRoutes() {
                 <Route exact path="/user/edit/:id" element={<EditUser />} />
                 <Route exact path="/user/delete/:id" element={<DeleteUser />} />
                 <Route exact path="/admin" element={<Admin />} />
-                <Route exact path="/admin/listofusers" element={<ListOfUsers />} />
             </Routes>
         </BrowserRouter>
 
