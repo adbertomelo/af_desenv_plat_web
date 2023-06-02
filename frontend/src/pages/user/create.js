@@ -34,7 +34,7 @@ const Create = () => {
             .then(data => {
                 // Faça algo com os dados retornados
                 //console.log(data);
-                navigate("/admin");
+                navigate("/home");
             })
             .catch(error => {
                 // Trate erros de solicitação ou análise

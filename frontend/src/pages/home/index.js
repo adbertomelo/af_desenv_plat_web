@@ -1,4 +1,4 @@
-import React from 'react'
+﻿import React from 'react'
 import { Link } from 'react-router-dom';
 
 
@@ -6,7 +6,7 @@ const Home = () => {
 
     const menu = () => {
         return <li key="1">
-            <Link to={'/admin'}>Gest�o Administrativa</Link>
+            <Link to={'/admin'}>Gestão Administrativa</Link>
         </li>
     }
 

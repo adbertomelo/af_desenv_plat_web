@@ -6,6 +6,7 @@ const Login = () => {
 
     const [user, setUser] = useState({ "Email": "", "Password": "" });
     const [msgError, setMsgError] = useState('');
+    const [msgButton, setMsgButton] = useState('Entrar');
 
     const navigate = useNavigate();
 
@@ -20,7 +21,9 @@ const Login = () => {
             }));
     }
 
-    const handleSubmit = (e) => {
+
+    const handleSubmit = async (e) => {
+
 
         e.preventDefault();
 
@@ -32,8 +35,11 @@ const Login = () => {
             body: JSON.stringify({ ...user })
         };
 
+
         fetch(`${URL_API}/account/login`, requestOptions)
             .then(response => {
+
+                setMsgButton("Aguarde...");
 
                 if (!response.ok) {
                     setMsgError("Usuário ou senha inválidos");
@@ -50,7 +56,8 @@ const Login = () => {
             .catch(error => {
                 // Trate erros de solicitação ou análise
                 console.error(error);
-            });
+            })
+            .finally(() => { setMsgButton("Entrar") });
 
 
     };
@@ -72,7 +79,7 @@ const Login = () => {
 
                         </div>
                         <span>{msgError}</span>
-                        <button type="submit" className="btn btn-primary btn-block">Entrar</button>
+                        <button type="submit" className="btn btn-primary btn-block">{msgButton}</button>
                     </form>
                     <div className="signup-link">
                         <p className="mt-3">Não tem conta? <Link to="user/create">Cadastre-se</Link></p>
