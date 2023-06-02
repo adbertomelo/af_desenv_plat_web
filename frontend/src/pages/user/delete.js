@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+Ôªøimport React, { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { URL_API } from '../../api';
 
@@ -62,7 +62,7 @@ const Delete = () => {
                 navigate("/admin");
             })
             .catch(error => {
-                // Trate erros de solicitaÁ„o ou an·lise
+                // Trate erros de solicita√ß√£o ou an√°lise
 
                 error.then(
                     msg => { setMsgError(msg) });
@@ -74,7 +74,7 @@ const Delete = () => {
     return (
         <form onSubmit={handleSubmit}>
             <div>
-                <span>Confirma a exclus„o do usu·rio {user.name}?</span>
+                <span>Confirma a exclus√£o do usu√°rio {user.name}?</span>
                 <button type="submit">Confirmar</button>
 
             </div>

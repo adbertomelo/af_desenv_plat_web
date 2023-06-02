@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+ï»¿import React, { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { URL_API } from '../../api';
 
@@ -75,12 +75,12 @@ const Edit = () => {
                 //return response.json();
             })
             .then(data => {
-                // Faça algo com os dados retornados
+                // FaÃ§a algo com os dados retornados
                 //console.log(data);
                 navigate("/admin");
             })
             .catch(error => {
-                // Trate erros de solicitação ou análise
+                // Trate erros de solicitaÃ§Ã£o ou anÃ¡lise
                 console.log(error);
                 error.then(
                     msg => { setMsgError(msg) });
@@ -93,7 +93,7 @@ const Edit = () => {
         <>
             <div class="container">
                 <div class="login-container">
-                    <h2 class="mb-4">Aleração de Cadastro</h2>
+                    <h2 class="mb-4">AleraÃ§Ã£o de Cadastro</h2>
                     <form onSubmit={handleSubmit}>
                         <div class="mb-3">
                             <label for="username" class="form-label">Nome</label>

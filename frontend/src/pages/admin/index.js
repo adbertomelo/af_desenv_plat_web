@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+ï»¿import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { URL_API } from '../../api';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -58,13 +58,13 @@ const Admin = () => {
 
 
         <div>
-            <h3>Usuários</h3>
+            <h3>UsuÃ¡rios</h3>
             <table class="table">
                 <thead>
                     <tr>
                         <th>Nome</th>
                         <th>E-mail</th>
-                        <th colSpan="2">Ações</th>
+                        <th colSpan="2">AÃ§Ãµes</th>
                     </tr>
                 </thead>
                 <tbody>
