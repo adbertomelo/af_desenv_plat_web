@@ -9,6 +9,7 @@ import EditUser from '../pages/user/edit';
 import DeleteUser from '../pages/user/delete';
 import Admin from '../pages/admin'
 import Home from '../pages/home'
+import Login from '../pages/account/login';
 
 export default function MainRoutes() {
 
@@ -16,7 +17,7 @@ export default function MainRoutes() {
 
         <BrowserRouter>
             <Routes>
-                
+                <Route exact path="/" element={<Login />} />
                 <Route exact path="/home" element={<Home />} />
                 <Route exact path="/user/create" element={<CreateUser />} />
                 <Route exact path="/user/edit/:id" element={<EditUser />} />
