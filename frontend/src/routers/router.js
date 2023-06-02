@@ -4,7 +4,6 @@ import {
     Route,
 } from 'react-router-dom';
 
-import Login from '../pages/account/login';
 import CreateUser from '../pages/user/create';
 import EditUser from '../pages/user/edit';
 import DeleteUser from '../pages/user/delete';
@@ -17,12 +16,13 @@ export default function MainRoutes() {
 
         <BrowserRouter>
             <Routes>
-                <Route exact path="/" element={<Login />} />
+                
                 <Route exact path="/home" element={<Home />} />
                 <Route exact path="/user/create" element={<CreateUser />} />
                 <Route exact path="/user/edit/:id" element={<EditUser />} />
                 <Route exact path="/user/delete/:id" element={<DeleteUser />} />
                 <Route exact path="/admin" element={<Admin />} />
+                
             </Routes>
         </BrowserRouter>
 

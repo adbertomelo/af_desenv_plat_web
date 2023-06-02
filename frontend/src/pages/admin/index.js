@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { URL_API } from '../../api';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPencil, faTrash } from '@fortawesome/free-solid-svg-icons'
-
+import Header from '../../components/header'
 
 const Admin = () => {
 
@@ -56,24 +56,29 @@ const Admin = () => {
     }
     return (
 
+        <>
+            <Header></Header>
 
-        <div>
-            <h3>Usuários</h3>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>Nome</th>
-                        <th>E-mail</th>
-                        <th colSpan="2">Ações</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {
-                        listOfUsers()
-                    }
-                </tbody>
-            </table>
-        </div>
+            <div class="container">
+
+                <h4>Usuários</h4>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>E-mail</th>
+                            <th colSpan="2">Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {
+                            listOfUsers()
+                        }
+                    </tbody>
+                </table>
+            </div>
+
+        </>
 
 
     );
