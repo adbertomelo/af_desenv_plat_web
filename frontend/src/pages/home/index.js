@@ -11,7 +11,7 @@ const Home = () => {
     }
 
     return (
-        <div className="container">
+        <>
 
             <Header></Header>
 
@@ -21,7 +21,7 @@ const Home = () => {
                 }
 
             </ul>
-        </div>
+        </>
         )
 }
 

@@ -4,9 +4,10 @@ import { URL_API } from '../../api';
 
 const Login = () => {
 
+    const MSG_BUTTON = 'Entrar';
     const [user, setUser] = useState({ "Email": "", "Password": "" });
     const [msgError, setMsgError] = useState('');
-    const [msgButton, setMsgButton] = useState('Entrar');
+    const [msgButton, setMsgButton] = useState(MSG_BUTTON);
 
     const navigate = useNavigate();
 
@@ -55,7 +56,7 @@ const Login = () => {
                 // Trate erros de solicitação ou análise
                 console.error(error);
             })
-            .finally(() => { setMsgButton("Entrar") });
+            .finally(() => { setMsgButton(MSG_BUTTON) });
 
 
     };

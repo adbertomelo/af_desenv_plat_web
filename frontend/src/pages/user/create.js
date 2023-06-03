@@ -5,8 +5,10 @@ import { URL_API } from '../../api'
 
 const Create = () => {
 
+    const MSG_BUTTON = 'Confirmar';
     const [user, setUser] = useState({});
     const [msgError, setMsgError] = useState('');
+    const [msgButton, setMsgButton] = useState(MSG_BUTTON);
 
     const navigate = useNavigate();
 
@@ -21,6 +23,7 @@ const Create = () => {
         e.preventDefault();
 
         setMsgError('');
+        setMsgButton('Aguarde...');
 
         fetch(`${URL_API}/user`, requestOptions)
             .then(response => {
@@ -41,6 +44,8 @@ const Create = () => {
                 console.log(error);
                 error.then(
                     msg => { setMsgError(msg) });
+            }).finally(() => {
+                setMsgButton(MSG_BUTTON);
             });
 
     }
@@ -81,7 +86,7 @@ const Create = () => {
                         </div>
 
                         <span class="error-msg">{msgError}</span>
-                        <button type="submit" class="btn btn-primary btn-block">Confirmar</button>
+                        <button type="submit" class="btn btn-primary btn-block">{ msgButton }</button>
 
                     </form>
                 </div>

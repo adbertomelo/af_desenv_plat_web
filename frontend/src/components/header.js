@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 
 
 
@@ -7,9 +7,9 @@ const Header = () => {
 
     return (
 
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <nav class="navbar navbar-expand-lg" style={{ backgroundColor: '#e3f2fd' }}>
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Navbar</a>
+                <a class="navbar-brand" href="#">Bolão10</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -17,6 +17,9 @@ const Header = () => {
                     <ul class="navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="/home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/admin">Admin</a>
                         </li>
                     </ul>
                 </div>
