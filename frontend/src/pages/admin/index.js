@@ -9,14 +9,17 @@ const Admin = () => {
 
             <Header></Header>
 
-            <ul>
-                <li key="1">
-                    <Link to={'/user/list'}>Listar Usuários</Link>
-                </li>
-                <li key="2">
-                    <Link to={'/user/create'}>Criar Usuário</Link>
-                </li>
-            </ul>
+            <div class="container">
+
+                <div className="page-header">Gestão Administrativa</div>
+
+                <ul className="list-group">
+                    <li className="list-group-item" key="1">
+                        <Link to={'/user/list'}>Listar Usuários</Link>
+                    </li>
+                </ul>
+            </div>
+
 
         </>
     )

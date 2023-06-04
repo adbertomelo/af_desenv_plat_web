@@ -4,23 +4,25 @@ import Header from '../../components/header'
 
 const Home = () => {
 
-    const menu = () => {
-        return <li key="1">
-            <Link to={'/admin'}>Gestão Administrativa</Link>
-        </li>
-    }
+
 
     return (
         <>
 
             <Header></Header>
 
-            <ul>
-                {
-                    menu()
-                }
+            <div class="container">
 
-            </ul>
+                <div className="page-header">Home</div>
+
+                <ul className="list-group">
+                    <li className="list-group-item" key="1">
+                        <Link to={'/admin'}>Ir para Gestão Administrativa</Link>
+                    </li>
+                </ul>
+
+            </div>
+
         </>
         )
 }

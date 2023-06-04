@@ -1,7 +1,7 @@
 ﻿import React, { useState, useEffect } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useParams, Link } from 'react-router-dom';
 import { URL_API } from '../../api';
-
+import Header from '../../components/header'
 
 const Delete = () => {
 
@@ -72,15 +72,25 @@ const Delete = () => {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
-            <div>
-                <span>Confirma a exclusão do usuário {user.name}?</span>
-                <button type="submit">Confirmar</button>
 
+        <>
+            <Header></Header>
+
+            <div class="container">
+
+                <div className="page-header">Confirmação da exclusão</div>
+
+                <form onSubmit={handleSubmit}>
+                    <div>
+                        <span style={{ paddingRight: "15px", color:"red" } }>Confirma a exclusão do usuário {user.name}?</span>
+                        <button className="btn btn-danger" type="submit">Confirmar</button>
+                        <Link style={{ paddingLeft:"15px"}} to={'/user/list'}>Voltar</Link>
+                    </div>
+
+                    <span>{msgError}</span>
+                </form>
             </div>
-
-            <span>{msgError}</span>
-        </form>
+        </>
     );
 
 };

@@ -45,8 +45,8 @@ const List = () => {
             return <tr key={u.id}>
                 <td>{u.name}</td>
                 <td>{u.email}</td>
-                <td><Link to={`/user/edit/${u.id}`} title="Alterar" ><FontAwesomeIcon icon={faPencil} /></Link></td>
-                <td><Link to={`/user/delete/${u.id}`} title="Excluir"><FontAwesomeIcon icon={faTrash} /></Link></td>
+                <td style={{ textAlign: "center" }}><Link to={`/user/edit/${u.id}`} title="Alterar" ><FontAwesomeIcon icon={faPencil} /></Link></td>
+                <td style={{ textAlign: "center" }}><Link to={`/user/delete/${u.id}`} title="Excluir"><FontAwesomeIcon icon={faTrash} /></Link></td>
             </tr>
         });
 
@@ -60,13 +60,14 @@ const List = () => {
 
             <div class="container">
 
-                <h4>Usuários</h4>
+                <div className="page-header">Usuários</div>
+
                 <table class="table">
                     <thead>
                         <tr>
                             <th>Nome</th>
                             <th>E-mail</th>
-                            <th colSpan="2">Ações</th>
+                            <th colSpan="2" style={{ textAlign:"center"} }>Ações</th>
                         </tr>
                     </thead>
                     <tbody>

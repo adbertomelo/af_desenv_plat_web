@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { URL_API } from '../../api'
 
 
@@ -37,7 +37,7 @@ const Create = () => {
             .then(data => {
                 // Faça algo com os dados retornados
                 //console.log(data);
-                navigate("/home");
+                navigate("/");
             })
             .catch(error => {
                 // Trate erros de solicitação ou análise
@@ -87,7 +87,7 @@ const Create = () => {
 
                         <span class="error-msg">{msgError}</span>
                         <button type="submit" class="btn btn-primary btn-block">{ msgButton }</button>
-
+                        <Link to={'/'}>Voltar</Link>
                     </form>
                 </div>
             </div>

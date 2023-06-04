@@ -1,7 +1,7 @@
 ﻿import React, { useState, useEffect } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import { URL_API } from '../../api';
-
+import Header from '../../components/header'
 
 const Edit = () => {
 
@@ -77,7 +77,7 @@ const Edit = () => {
             .then(data => {
                 // Faça algo com os dados retornados
                 //console.log(data);
-                navigate("/admin");
+                navigate("/user/list");
             })
             .catch(error => {
                 // Trate erros de solicitação ou análise
@@ -91,9 +91,14 @@ const Edit = () => {
 
     return (
         <>
+            <Header></Header>
+
             <div class="container">
-                <div class="login-container">
-                    <h2 class="mb-4">Aleração de Cadastro</h2>
+
+                <div className="page-header">Alteração de Usuário</div>
+
+                
+                    
                     <form onSubmit={handleSubmit}>
                         <div class="mb-3">
                             <label for="username" class="form-label">Nome</label>
@@ -105,11 +110,18 @@ const Edit = () => {
                             <input type="text" class="form-control" id="email" name="email" defaultValue={user.email}
                                 onChange={(e) => handleChange(e)} placeholder="Digite seu email" />
                         </div>
+
                         <span class="error-msg">{msgError}</span>
-                        <button type="submit" class="btn btn-primary btn-block">Confirmar</button>
+
+                        <div>
+                            <button type="submit" style={{ width: "30%" }} className="btn btn-primary btn-block">Confirmar</button>
+                            <Link style={{ paddingLeft: "15px" }} to={'/user/list'}>Voltar</Link>
+                        </div>
+                        
+
                     </form>
 
-                </div>
+                
             </div>
 
         </>
