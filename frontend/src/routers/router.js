@@ -19,14 +19,15 @@ export default function MainRoutes() {
             
             <BrowserRouter>
                 <Routes>
-                    <Route exact path="/" element={<Login />} />
-                <Route exact path="/home" element={<Home />} />
+                    <Route exact path="/" element={<LandingPage />} />
+                    <Route exact path="/login" element={<Login />} />
+                    <Route exact path="/home" element={<Home />} />
                     <Route exact path="/user/list" element={<ListUser />} />
                     <Route exact path="/user/create" element={<CreateUser />} />
                     <Route exact path="/user/edit/:id" element={<EditUser />} />
                     <Route exact path="/user/delete/:id" element={<DeleteUser />} />
                     <Route exact path="/admin" element={<Admin />} />
-                    <Route exact path="/landingpage" element={<LandingPage />} />
+                    
                 </Routes>
             </BrowserRouter>
 

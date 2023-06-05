@@ -11,12 +11,9 @@ const LandingPage = () => {
 
                 <div class="container">
 
-                    <div class="row py-2">
+                    <div class="row">
 
-                        <div class="col-4 d-lg-none py-3">
-                        </div>
-
-                        <div class="col-4 col-md-3 col-xxl-4 text-center text-md-start">
+                        <div class="col">
                             <a href="/">
                                 <img class="img-fluid logo-topo"
                                     style={{ maxWidth: "130px", maxHeight: "392px" }}
@@ -24,22 +21,13 @@ const LandingPage = () => {
                             </a>
                         </div>
 
-                        <div class="col-12 col-md-7 col-xxl-6 pt-3 pt-md-4 d-none d-lg-block">
+                        <div class="col">
 
-                            
-                                <div class="row">
+                            <p className="mt-3" style={{ color: "white" }}>Não tem conta?
+                                <Link to="/user/create">Cadastre-se</Link> Ou Faça seu
+                                <Link to="/login">Login</Link></p>
 
-                                    <div class="col pe-md-0 lh10">
 
-                                        <p className="mt-3" style={{ color: "white" }}>Não tem conta?
-                                            <Link to="/user/create">Cadastre-se</Link> Ou Faça seu 
-                                            <Link to="/login">Login</Link></p>
-                                        
-                                    </div>
-
-                                </div>
-
-                            
                         </div>
                     </div>
 
@@ -58,16 +46,16 @@ const LandingPage = () => {
                     </div>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="../../../body_home.jpg" class="d-block w-100" alt="..."/>
-                                <div class="carousel-caption d-none d-md-block">
-                                    <h1>Crie seu bolão, convide seus amigos e divirta-se</h1>
-                                </div>          
+                            <img src="../../../body_home.jpg" class="d-block w-100" alt="..." />
+                            <div class="carousel-caption d-none d-md-block">
+                                <h1>Crie seu bolão, convide seus amigos e divirta-se</h1>
+                            </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="../../../body_home.jpg" class="d-block w-100" alt="..."/>
-                                <div class="carousel-caption d-none d-md-block">
-                                    <h1>Bolão com os principais campeonatos do Brasil</h1>
-                                </div>
+                            <img src="../../../body_home.jpg" class="d-block w-100" alt="..." />
+                            <div class="carousel-caption d-none d-md-block">
+                                <h1>Bolão com os principais campeonatos do Brasil</h1>
+                            </div>
                         </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
