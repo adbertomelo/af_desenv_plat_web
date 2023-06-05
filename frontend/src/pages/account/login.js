@@ -1,6 +1,7 @@
 ﻿import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { URL_API } from '../../api';
+import Header from '../../components/header'
 
 const Login = () => {
 
@@ -63,9 +64,13 @@ const Login = () => {
 
     return (
         <>
-            <div>
+            <Header withHome="false"></Header>
+
+            <div class="container">
+
+                <div className="page-header">Login</div>
+
                 <div className="login-container">
-                    <h2 className="mb-4">Login</h2>
                     <form onSubmit={handleSubmit}>
                         <div className="mb-3">
                             <label for="username" className="form-label">Email</label>
@@ -80,9 +85,7 @@ const Login = () => {
                         <span>{msgError}</span>
                         <button type="submit" className="btn btn-primary btn-block">{msgButton}</button>
                     </form>
-                    <div className="signup-link">
-                        <p className="mt-3">Não tem conta? <Link to="user/create">Cadastre-se</Link></p>
-                    </div>
+
                 </div>
             </div>
 

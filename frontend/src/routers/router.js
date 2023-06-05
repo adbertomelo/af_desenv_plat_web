@@ -11,6 +11,7 @@ import DeleteUser from '../pages/user/delete';
 import Admin from '../pages/admin'
 import Home from '../pages/home'
 import Login from '../pages/account/login';
+import LandingPage from '../pages/landingpage';
 
 export default function MainRoutes() {
 
@@ -25,7 +26,7 @@ export default function MainRoutes() {
                     <Route exact path="/user/edit/:id" element={<EditUser />} />
                     <Route exact path="/user/delete/:id" element={<DeleteUser />} />
                     <Route exact path="/admin" element={<Admin />} />
-
+                    <Route exact path="/landingpage" element={<LandingPage />} />
                 </Routes>
             </BrowserRouter>
 

@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
+﻿import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { URL_API } from '../../api'
-
+import Header from '../../components/header'
 
 const Create = () => {
 
@@ -35,12 +35,12 @@ const Create = () => {
                 return response.json();
             })
             .then(data => {
-                // Fa�a algo com os dados retornados
+                // Faça algo com os dados retornados
                 //console.log(data);
                 navigate("/");
             })
             .catch(error => {
-                // Trate erros de solicita��o ou an�lise
+                // Trate erros de solicitação ou análise
                 console.log(error);
                 error.then(
                     msg => { setMsgError(msg) });
@@ -64,9 +64,12 @@ const Create = () => {
 
         <>
 
-            <div className="container">
+            <Header withHome="false"></Header>
+
+            <div class="container">
+
+                <div className="page-header">Criação de Usuário</div>
                 <div className="login-container">
-                    <h2 className="mb-4">Cadastro</h2>
                     <form onSubmit={handleSubmit}>
                         <div class="mb-3">
                             <label for="username" class="form-label">Nome</label>
@@ -89,8 +92,8 @@ const Create = () => {
                         <button type="submit" class="btn btn-primary btn-block">{ msgButton }</button>
                         <Link to={'/'}>Voltar</Link>
                     </form>
+                    </div>
                 </div>
-            </div>
 
         </>
     )

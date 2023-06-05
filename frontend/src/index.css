@@ -40,3 +40,7 @@ body {
     font-size: 22px;
     line-height: 26px;
 }
+
+.topo-home {
+    background: url(https://vippredictorstorage.blob.core.windows.net/content-theme-20160405/topo_home_bg.png) repeat-x;
+}
